@@ -26,14 +26,14 @@ li {
 }
 
 .article-card {
-  width: 500px;
+  width: 450px;
   border: red solid 3px;
-  border-radius: 4%;
+  border-radius: 5px;
   margin: 2rem auto;
   padding: 2rem;
 }
 
 .topic-image {
   height: 200px;
-  width: 300px;
+  width: 250px;
 }
