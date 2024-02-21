@@ -1,5 +1,11 @@
-const ArticleCard = () => {
-  return <h1>Atricle card</h1>;
+const ArticleCard = ({ article }) => {
+  return (
+    <li>
+      <h3>{article.title}</h3>
+      <p>{article.topic}</p>
+      {/* <div>{article}</div> */}
+    </li>
+  );
 };
 
 export default ArticleCard;
