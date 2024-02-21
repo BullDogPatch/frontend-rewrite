@@ -15,3 +15,8 @@
 li {
   list-style: none;
 }
+
+.topic-image {
+  height: 200px;
+  width: 300px;
+}
