@@ -8,12 +8,29 @@
   height: 100vh;
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
   text-align: center;
 }
 
 li {
   list-style: none;
+}
+
+.header {
+  width: 100vw;
+  border-bottom: red solid 3px;
+}
+
+.header h1 {
+  font-size: 4rem;
+  padding: 1.3rem 0;
+}
+
+.article-card {
+  width: 500px;
+  border: red solid 3px;
+  border-radius: 4%;
+  margin: 2rem auto;
+  padding: 2rem;
 }
 
 .topic-image {

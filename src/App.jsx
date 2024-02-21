@@ -17,11 +17,13 @@ function App() {
   return (
     <div className="container">
       <Header />
-      <ul>
-        {articles.map((article) => (
-          <ArticleCard key={article.article_id} article={article} />
-        ))}
-      </ul>
+      <section>
+        <ul>
+          {articles.map((article) => (
+            <ArticleCard key={article.article_id} article={article} />
+          ))}
+        </ul>
+      </section>
     </div>
   );
 }
