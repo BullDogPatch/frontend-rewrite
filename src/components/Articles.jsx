@@ -1,30 +1,20 @@
 import { useState, useEffect } from "react";
 import { fetchAllArticles } from "../utils/utils";
+import { useQuery } from "@tanstack/react-query";
 import ArticleCard from "./ArticleCard";
 import Loading from "./Loading";
 
 const Articles = () => {
-  const [articles, setArticles] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const { data, isLoading, isError } = useQuery({
+    queryKey: ["articles"],
+    queryFn: fetchAllArticles,
+  });
 
-  useEffect(() => {
-    setLoading(true);
-    try {
-      fetchAllArticles().then((data) => {
-        console.log(data);
-        setLoading(false);
-        setArticles(data);
-      });
-    } catch (error) {
-      console.error(error);
-    }
-  }, []);
-
-  if (loading) return <Loading />;
+  if (isLoading) return <Loading />;
 
   return (
     <ul>
-      {articles.map((article) => (
+      {data.map((article) => (
         <ArticleCard key={article.article_id} article={article} />
       ))}
     </ul>
