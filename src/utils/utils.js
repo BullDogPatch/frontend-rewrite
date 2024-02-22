@@ -8,3 +8,8 @@ export const fetchAllArticles = async () => {
   const { data } = await api.get("/articles");
   return data.articles;
 };
+
+export const fetchAllUsers = async () => {
+  const { data } = await api.get("/users");
+  return data.users;
+};
