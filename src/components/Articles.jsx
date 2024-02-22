@@ -6,12 +6,14 @@ const Articles = () => {
   const [articles, setArticles] = useState([]);
 
   useEffect(() => {
-    fetchAllArticles()
-      .then((data) => {
+    try {
+      fetchAllArticles().then((data) => {
         console.log(data);
         setArticles(data);
-      })
-      .catch((error) => console.log(error));
+      });
+    } catch (error) {
+      console.error(error);
+    }
   }, []);
 
   return (
