@@ -2,7 +2,6 @@ import footballImage from "../images/football.png";
 import cookingImage from "../images/cooking.png";
 import codingImage from "../images/coding.png";
 import Moment from "moment";
-console.log(Moment);
 
 const ArticleCard = ({ article }) => {
   return (
