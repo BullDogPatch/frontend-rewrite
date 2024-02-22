@@ -1,8 +1,8 @@
-import { useState, useEffect } from "react";
-import { fetchAllArticles } from "../utils/utils";
 import { useQuery } from "@tanstack/react-query";
+import { fetchAllArticles } from "../utils/utils";
 import ArticleCard from "./ArticleCard";
 import Loading from "./Loading";
+import { Link } from "react-router-dom";
 
 const Articles = () => {
   const { data, isLoading, isError } = useQuery({
@@ -13,11 +13,14 @@ const Articles = () => {
   if (isLoading) return <Loading />;
 
   return (
-    <ul>
-      {data.map((article) => (
-        <ArticleCard key={article.article_id} article={article} />
-      ))}
-    </ul>
+    <>
+      <Link to="/users">Users</Link>
+      <ul>
+        {data.map((article) => (
+          <ArticleCard key={article.article_id} article={article} />
+        ))}
+      </ul>
+    </>
   );
 };
 

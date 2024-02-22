@@ -1,5 +1,5 @@
-function Error() {
-  return <div>Error</div>;
-}
+const Error = ({ children }) => {
+  return <div>{children}</div>;
+};
 
 export default Error;

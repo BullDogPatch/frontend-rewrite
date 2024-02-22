@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import { fetchAllUsers } from "../utils/utils";
 import { useQuery } from "@tanstack/react-query";
 import Loading from "./Loading";
@@ -9,8 +8,6 @@ const Users = () => {
     queryKey: ["users"],
     queryFn: fetchAllUsers,
   });
-
-  console.log(data);
 
   if (isLoading) return <Loading />;
   return (
