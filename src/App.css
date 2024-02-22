@@ -25,6 +25,10 @@ li {
   padding: 1.3rem 0;
 }
 
+nav {
+  text-transform: uppercase;
+}
+
 .article-card {
   width: 450px;
   border: red solid 3px;

@@ -14,7 +14,6 @@ const Articles = () => {
 
   return (
     <>
-      <Link to="/users">Users</Link>
       <ul>
         {data.map((article) => (
           <ArticleCard key={article.article_id} article={article} />

@@ -13,3 +13,8 @@ export const fetchAllUsers = async () => {
   const { data } = await api.get("/users");
   return data.users;
 };
+
+export const getTopics = async () => {
+  const { data } = await api.get("/topics");
+  return data.topics
+};
