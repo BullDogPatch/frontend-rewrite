@@ -17,6 +17,8 @@ li {
 }
 
 .header {
+  height: 100px;
+  width: 100%;
   border-bottom: red solid 3px;
 }
 

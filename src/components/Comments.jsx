@@ -14,7 +14,7 @@ const Comments = ({ article_id }) => {
   });
 
   if (isLoading) return <Loading />;
-
+  console.log(comments);
   return (
     <div>
       <ul>
