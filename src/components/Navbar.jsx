@@ -22,6 +22,7 @@ function Navbar() {
             fontSize: "1.2rem",
             padding: "5px",
           })}
+          key={topic.slug}
         >
           {topic.slug}
         </NavLink>
