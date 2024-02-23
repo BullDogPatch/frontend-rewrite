@@ -4,6 +4,7 @@ import "./App.css";
 import Articles from "./components/Articles";
 import Users from "./components/Users";
 import Navbar from "./components/Navbar";
+import ArticleById from "./components/ArticleById";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Routes>
           <Route index element={<Articles />} />
           <Route path="/users" element={<Users />} />
+          <Route path="/articles/:article_id" element={<ArticleById />} />
         </Routes>
       </section>
     </div>
