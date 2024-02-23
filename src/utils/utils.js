@@ -9,6 +9,11 @@ export const fetchAllArticles = async () => {
   return data.articles;
 };
 
+export const fetchArticleById = async (article_id) => {
+  const { data } = await api.get(`/articles/${article_id}`);
+  return data;
+};
+
 export const fetchAllUsers = async () => {
   const { data } = await api.get("/users");
   return data.users;
@@ -16,5 +21,5 @@ export const fetchAllUsers = async () => {
 
 export const getTopics = async () => {
   const { data } = await api.get("/topics");
-  return data.topics
+  return data.topics;
 };
