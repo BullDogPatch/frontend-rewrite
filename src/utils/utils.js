@@ -28,3 +28,8 @@ export const getTopics = async () => {
   const { data } = await api.get("/topics");
   return data.topics;
 };
+
+export const getArticlesByTopic = async (topic) => {
+  const { data } = await api.get(`/articles?topic=${topic}`);
+  return data.articles;
+};
