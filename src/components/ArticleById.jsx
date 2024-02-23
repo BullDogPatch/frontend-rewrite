@@ -5,6 +5,7 @@ import Moment from "moment";
 import footballImage from "../images/football.png";
 import cookingImage from "../images/cooking.png";
 import codingImage from "../images/coding.png";
+import Comments from "./Comments";
 import Loading from "./Loading";
 
 const ArticleById = () => {
@@ -18,7 +19,7 @@ const ArticleById = () => {
   if (isLoading) return <Loading />;
 
   return (
-    <>
+    <div className="article-by-id">
       <h3>{data.article.title}</h3>
       <h5>{data.article.topic}</h5>
       <div>
@@ -40,7 +41,8 @@ const ArticleById = () => {
         {Moment(data.article.created_at).format("MMMM Do YYYY")}
       </p>
       <p>Votes: {data.article.votes}</p>
-    </>
+      <Comments article_id={data.article.article_id} />
+    </div>
   );
 };
 
