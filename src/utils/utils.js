@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: 'https://vast-plum-donkey-hose.cyclic.app/api',
+  baseURL: 'https://northcoders-backend.onrender.com/api',
 });
 
 export const fetchAllArticles = async () => {
